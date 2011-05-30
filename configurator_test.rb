@@ -12,9 +12,19 @@ class ConfiguratorTest < Test::Unit::TestCase
     assert_equal 'bar', Configurator.bar
   end
 
+  def test_should_respond_to_foo
+    Configurator.config_hash
+    assert Configurator.respond_to?(:foo)
+  end
+
+  def test_should_respond_to_bar
+    Configurator.config_hash
+    assert Configurator.respond_to?(:bar)
+  end
+
   def test_should_raise_an_exception_for_unknown_method
     Configurator.config_hash
-    assert_raise RuntimeError, "Booga (haha) or Ooga." do
+    assert_raise NoMethodError do
       Configurator.haha
     end
   end
