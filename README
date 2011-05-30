@@ -1,0 +1,5 @@
+This runs on ruby 1.9.2
+
+This code was presented in RubyConf India 2011 by Habibullah Pagarkar and Chirantan Mitra
+
+This code shows abuse of method_missing and how to move away from it.
